@@ -25,7 +25,7 @@ CC 4.0
 ## Obstacles and solution
 1. 我使用driver模拟浏览器的行为，寻找“加载更多”的按钮并且点击它，我使用了两种方法实现这个操作，但是哪种方法会更好？为什么？（个人感觉是第一种）无论是哪种方法都会出现点击到其他无关的链接并且跳转出新窗口的问题，只是出现的次数不同，如果可以避免这种问题的发生？
 2. 当无关的页面弹出的时候，如果不返回原本需要爬区的页面是否会停止爬取行为？
-3. 爬取出的数据同csv存的时候用了encoding = ‘gbk’，但再用pandas打开却显示有encoding的错误。
+3. （已解决）爬取出的数据同csv存的时候用了encoding = ‘gbk’，但再用pandas打开却显示有encoding的错误，因此用pandas打开的时候也要加上gbk的encoding
 4. （已解决）在爬出所有电视剧的列表之后发现豆瓣自带的按照评分高低排序是存在错误的，因此要对这个list按照score进行重新排序，方法一是使用的sorted函数，用lambda进行排序，另一个方法是import一个新的函数operator，用itemgetter对指定的key进行排序，例如，title/director/actor/url都是按照score的高低进行排序，并一起输出（感觉没讲清楚..）
 
 
